@@ -3,22 +3,51 @@ header, nav, aside, main, footer, article, figure, p {
     margin: 5px;
 }
 
-header, footer {
-    background: #0c0;
+body {
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'nav nav nav'
+        'menu content content'
+        'footer footer footer';
+}
+
+header {
+    grid-area: header
 }
 
 nav {
-    background: #ee0;
+    grid-area: nav;
+}
+
+aside {
+    grid-area: menu;
+}
+
+main {
+    grid-area: content;
+}
+
+footer {
+    grid-area: footer;
+}
+
+header, footer {
+    background: #0c07;
+}
+
+nav {
+    background: #ee07;
 }
 
 aside, main {
-    background: #ea0;
+    background: #ea07;
 }
 
 article {
-    background: #5ee;
+    background: #5ee7;
 }
 
 figure, p {
-    background: #c7c;
+    background: #c7c7;
 }
