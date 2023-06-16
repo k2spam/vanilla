@@ -1,10 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
 header, nav, aside, main, footer, article, figure, p {
     min-height: 20px;
-    margin: 5px;
+    background: #eee;
+    transition: background 0.7s ease;
+    border: 1px solid #ddd
+}
+
+header:hover, 
+nav:hover, 
+aside:hover, 
+main:hover, 
+footer:hover, 
+article:hover, 
+figure:hover, 
+p:hover {
+    background: #ddd;
 }
 
 body {
     display: grid;
+    grid-template-columns: 5vw auto auto;
+    grid-template-rows: 50px 50px auto 70px;
     grid-template-areas: 
         'header header header'
         'nav nav nav'
@@ -13,7 +32,7 @@ body {
 }
 
 header {
-    grid-area: header
+    grid-area: header;
 }
 
 nav {
@@ -30,24 +49,4 @@ main {
 
 footer {
     grid-area: footer;
-}
-
-header, footer {
-    background: #0c07;
-}
-
-nav {
-    background: #ee07;
-}
-
-aside, main {
-    background: #ea07;
-}
-
-article {
-    background: #5ee7;
-}
-
-figure, p {
-    background: #c7c7;
 }
